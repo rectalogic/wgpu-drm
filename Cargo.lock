@@ -449,6 +449,7 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 [[package]]
 name = "naga"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "arrayvec",
  "bit-set",
@@ -929,6 +930,7 @@ dependencies = [
 [[package]]
 name = "wgpu"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "arrayvec",
  "bitflags",
@@ -957,6 +959,7 @@ dependencies = [
 [[package]]
 name = "wgpu-core"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "arrayvec",
  "bit-set",
@@ -987,6 +990,7 @@ dependencies = [
 [[package]]
 name = "wgpu-core-deps-apple"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "wgpu-hal",
 ]
@@ -994,6 +998,7 @@ dependencies = [
 [[package]]
 name = "wgpu-core-deps-emscripten"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "wgpu-hal",
 ]
@@ -1001,6 +1006,7 @@ dependencies = [
 [[package]]
 name = "wgpu-core-deps-windows-linux-android"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "wgpu-hal",
 ]
@@ -1013,14 +1019,12 @@ dependencies = [
  "pollster",
  "raw-window-handle",
  "wgpu",
- "wgpu-core",
- "wgpu-hal",
- "wgpu-types",
 ]
 
 [[package]]
 name = "wgpu-hal"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "android_system_properties",
  "arrayvec",
@@ -1072,6 +1076,7 @@ dependencies = [
 [[package]]
 name = "wgpu-types"
 version = "28.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
 dependencies = [
  "bitflags",
  "bytemuck",

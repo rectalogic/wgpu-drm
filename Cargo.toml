@@ -7,8 +7,4 @@ edition = "2024"
 drm = "0.14.2"
 pollster = "0.4.0"
 raw-window-handle = "0.6.2"
-# wgpu = { git = "https://github.com/gfx-rs/wgpu.git", rev = "c721b09" }
-wgpu = { path = "../../vendor/wgpu/wgpu" }
-wgpu-core = { path = "../../vendor/wgpu/wgpu-core" }
-wgpu-hal = { path = "../../vendor/wgpu/wgpu-hal" }
-wgpu-types = { path = "../../vendor/wgpu/wgpu-types" }
+wgpu = { git = "https://github.com/rectalogic/wgpu.git", rev = "96d75e3" }
