@@ -1,0 +1,14 @@
+[package]
+name = "wgpu-drm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+drm = "0.14.2"
+pollster = "0.4.0"
+raw-window-handle = "0.6.2"
+# wgpu = { git = "https://github.com/gfx-rs/wgpu.git", rev = "c721b09" }
+wgpu = { path = "../../vendor/wgpu/wgpu" }
+wgpu-core = { path = "../../vendor/wgpu/wgpu-core" }
+wgpu-hal = { path = "../../vendor/wgpu/wgpu-hal" }
+wgpu-types = { path = "../../vendor/wgpu/wgpu-types" }
