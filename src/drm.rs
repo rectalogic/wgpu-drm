@@ -45,9 +45,9 @@ impl Drm {
 
     pub fn window_surface_target(&self) -> SurfaceTargetUnsafe {
         SurfaceTargetUnsafe::RawHandle {
-            raw_display_handle: RawDisplayHandle::Drm(DrmDisplayHandle::new(
+            raw_display_handle: Some(RawDisplayHandle::Drm(DrmDisplayHandle::new(
                 self.card.as_fd().as_raw_fd(),
-            )),
+            ))),
             raw_window_handle: RawWindowHandle::Drm(DrmWindowHandle::new(
                 self.window.plane_handle.into(),
             )),

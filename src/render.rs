@@ -2,7 +2,8 @@ use std::{borrow::Cow, thread, time::Duration};
 use wgpu::SurfaceTargetUnsafe;
 
 pub async fn run(surface_target: SurfaceTargetUnsafe, width: u32, height: u32) {
-    let instance = wgpu::Instance::new(wgpu::InstanceDescriptor::from_env_or_default());
+    let instance =
+        wgpu::Instance::new(wgpu::InstanceDescriptor::new_without_display_handle_from_env());
 
     let surface = unsafe { instance.create_surface_unsafe(surface_target).unwrap() };
 
@@ -12,6 +13,7 @@ pub async fn run(surface_target: SurfaceTargetUnsafe, width: u32, height: u32) {
             force_fallback_adapter: false,
             // Request an adapter which can render to our surface
             compatible_surface: Some(&surface),
+            ..Default::default()
         })
         .await
         .expect("Failed to find an appropriate adapter");
@@ -83,9 +85,10 @@ async fn redraw(
     render_pipeline: &wgpu::RenderPipeline,
     queue: &wgpu::Queue,
 ) {
-    let frame = surface
-        .get_current_texture()
-        .expect("Failed to acquire next swap chain texture");
+    let frame = match surface.get_current_texture() {
+        wgpu::CurrentSurfaceTexture::Success(frame) => frame,
+        e => panic!("get_current_texture failed: {e:?}"),
+    };
     let view = frame
         .texture
         .create_view(&wgpu::TextureViewDescriptor::default());

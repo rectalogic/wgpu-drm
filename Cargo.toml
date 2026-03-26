@@ -7,4 +7,4 @@ edition = "2024"
 drm = "0.14.2"
 pollster = "0.4.0"
 raw-window-handle = "0.6.2"
-wgpu = { git = "https://github.com/rectalogic/wgpu.git", rev = "96d75e3" }
+wgpu = { git = "https://github.com/rectalogic/wgpu.git", rev = "3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5" }

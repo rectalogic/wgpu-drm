@@ -40,18 +40,18 @@ checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
 name = "bit-set"
-version = "0.8.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "08807e080ed7f9d5433fa9b275196cfc35414f66a0c79d864dc51a0d825231a3"
+checksum = "34ddef2995421ab6a5c779542c81ee77c115206f4ad9d5a8e05f4ff49716a3dd"
 dependencies = [
  "bit-vec",
 ]
 
 [[package]]
 name = "bit-vec"
-version = "0.8.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7"
+checksum = "b71798fca2c1fe1086445a7258a4bc81e6e49dcd24c8d0dd9a1e57395b603f51"
 
 [[package]]
 name = "bitflags"
@@ -108,9 +108,9 @@ checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
 
 [[package]]
 name = "codespan-reporting"
-version = "0.12.0"
+version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe6d2e5af09e8c8ad56c969f2157a3d4238cebc7c55f0a517728c38f7b200f81"
+checksum = "af491d569909a7e4dee0ad7db7f5341fef5c614d5b8ec8cf765732aba3cff681"
 dependencies = [
  "serde",
  "termcolor",
@@ -156,6 +156,21 @@ name = "drm"
 version = "0.14.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c5b71449a23fe79542d6527ca572844b2016abf9573c49e43144d546b1735aec"
+dependencies = [
+ "bitflags",
+ "bytemuck",
+ "bytemuck_derive",
+ "drm-ffi",
+ "drm-fourcc",
+ "libc",
+ "rustix",
+]
+
+[[package]]
+name = "drm"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a41816e58f47f49acfd956651055ddcf137c4882c2098c30c448817af21183a"
 dependencies = [
  "bitflags",
  "bytemuck",
@@ -343,12 +358,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hexf-parse"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dfa686283ad6dd069f105e5ab091b04c62850d3e4cf5d67debad1933f55023df"
-
-[[package]]
 name = "indexmap"
 version = "2.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -448,8 +457,8 @@ checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "naga"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "arrayvec",
  "bit-set",
@@ -459,7 +468,6 @@ dependencies = [
  "codespan-reporting",
  "half",
  "hashbrown 0.16.1",
- "hexf-parse",
  "indexmap",
  "libm",
  "log",
@@ -776,8 +784,9 @@ checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 
 [[package]]
 name = "spirv"
-version = "0.3.0+sdk-1.4.309.0"
-source = "git+https://github.com/gfx-rs/rspirv?rev=89ce4d0e64c91b0635f617409dc57cb031749a39#89ce4d0e64c91b0635f617409dc57cb031749a39"
+version = "0.4.0+sdk-1.4.341.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d9571ea910ebd84c86af4b3ed27f9dbdc6ad06f17c5f96146b2b671e2976744f"
 dependencies = [
  "bitflags",
 ]
@@ -929,8 +938,8 @@ dependencies = [
 
 [[package]]
 name = "wgpu"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "arrayvec",
  "bitflags",
@@ -958,8 +967,8 @@ dependencies = [
 
 [[package]]
 name = "wgpu-core"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "arrayvec",
  "bit-set",
@@ -984,29 +993,30 @@ dependencies = [
  "wgpu-core-deps-emscripten",
  "wgpu-core-deps-windows-linux-android",
  "wgpu-hal",
+ "wgpu-naga-bridge",
  "wgpu-types",
 ]
 
 [[package]]
 name = "wgpu-core-deps-apple"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "wgpu-hal",
 ]
 
 [[package]]
 name = "wgpu-core-deps-emscripten"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "wgpu-hal",
 ]
 
 [[package]]
 name = "wgpu-core-deps-windows-linux-android"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "wgpu-hal",
 ]
@@ -1015,7 +1025,7 @@ dependencies = [
 name = "wgpu-drm"
 version = "0.1.0"
 dependencies = [
- "drm",
+ "drm 0.14.2",
  "pollster",
  "raw-window-handle",
  "wgpu",
@@ -1023,8 +1033,8 @@ dependencies = [
 
 [[package]]
 name = "wgpu-hal"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "android_system_properties",
  "arrayvec",
@@ -1035,7 +1045,7 @@ dependencies = [
  "bytemuck",
  "cfg-if",
  "cfg_aliases",
- "drm",
+ "drm 0.15.0",
  "glow",
  "glutin_wgl_sys",
  "gpu-allocator",
@@ -1068,15 +1078,25 @@ dependencies = [
  "wasm-bindgen",
  "wayland-sys",
  "web-sys",
+ "wgpu-naga-bridge",
  "wgpu-types",
  "windows",
  "windows-core",
 ]
 
 [[package]]
+name = "wgpu-naga-bridge"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
+dependencies = [
+ "naga",
+ "wgpu-types",
+]
+
+[[package]]
 name = "wgpu-types"
-version = "28.0.0"
-source = "git+https://github.com/rectalogic/wgpu.git?rev=96d75e3#96d75e3ffb30661d59a01c9d16a2bc53e482f92c"
+version = "29.0.0"
+source = "git+https://github.com/rectalogic/wgpu.git?rev=3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5#3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5"
 dependencies = [
  "bitflags",
  "bytemuck",
