@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-drm = "0.14.2"
+drm = "0.15"
 pollster = "0.4.0"
 raw-window-handle = "0.6.2"
-wgpu = { git = "https://github.com/rectalogic/wgpu.git", rev = "3b7348ef161fc93e701fbaf1cbcf0f8634cb96e5" }
+wgpu = { git = "https://github.com/gfx-rs/wgpu.git", rev = "5bc99d5" }
